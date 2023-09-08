@@ -1,4 +1,4 @@
-export default function Logo() {
+export default function Logo({ className }) {
   return (
     <div className="flex gap-2 items-center">
       <svg
@@ -24,6 +24,7 @@ export default function Logo() {
         viewBox="0 0 136 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <g id="devlinks">
           <path

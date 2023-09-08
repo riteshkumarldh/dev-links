@@ -1,6 +1,6 @@
 import HeaderSection from "../components/HeaderSection";
 
-export default function HomePage() {
+export default function ProfilePage() {
   return (
     <>
       <HeaderSection />
