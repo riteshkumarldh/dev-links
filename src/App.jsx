@@ -6,15 +6,53 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import ProfilePreview from "./pages/ProfilePreview";
 
+import RouteProtect from "./pages/RouteProtect";
+
 export default function App() {
+  const authenticated = false;
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/preview" element={<ProfilePreview />} />
+        <Route
+          path="/"
+          element={
+            <RouteProtect isAuthenticated={authenticated}>
+              <HomePage />
+            </RouteProtect>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RouteProtect isAuthenticated={!authenticated}>
+              <LoginPage />
+            </RouteProtect>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <RouteProtect isAuthenticated={!authenticated}>
+              <RegisterPage />
+            </RouteProtect>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <RouteProtect isAuthenticated={authenticated}>
+              <ProfilePage />
+            </RouteProtect>
+          }
+        />
+        <Route
+          path="/preview"
+          element={
+            <RouteProtect isAuthenticated={authenticated}>
+              <ProfilePreview />
+            </RouteProtect>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
