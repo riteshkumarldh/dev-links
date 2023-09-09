@@ -8,8 +8,8 @@ import ProfilePreview from "./pages/ProfilePreview";
 
 import RouteProtect from "./pages/RouteProtect";
 
+let authenticated = true;
 export default function App() {
-  const authenticated = false;
   return (
     <BrowserRouter>
       <Routes>
