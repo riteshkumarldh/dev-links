@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 export default function NavbarLinks() {
   return (
-    <nav className="flex gap-2 items-center">
+    <nav className="flex gap-2 sm:gap-4 items-center">
       <NavLink
         to="/"
         className="flex items-center gap-1 px-4 py-3 rounded-lg font-semibold group"
