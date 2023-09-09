@@ -1,6 +1,7 @@
-export default function Button({ children, className }) {
+export default function Button({ children, className, disabled }) {
   return (
     <button
+      disabled={disabled}
       className={`py-3 w-full rounded-lg transition-all duration-200 outline-none focus:ring-4 focus:ring-bl-200  ${className}`}
     >
       {children}
