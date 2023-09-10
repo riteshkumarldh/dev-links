@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 import message from "../assets/icons/message.svg";
 import lock from "../assets/icons/lock.svg";
@@ -7,6 +8,19 @@ import InputBox from "./InputBox";
 import Button from "./Button";
 
 export default function LoginForm() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("login submitted", data);
+
+    reset();
+  };
+
   return (
     <div className="bg-white p-10 max-w-[476px] w-full">
       <div>
@@ -17,14 +31,20 @@ export default function LoginForm() {
           </p>
         </div>
 
-        <form className="flex flex-col gap-6">
+        <form className="flex flex-col gap-6" onSubmit={handleSubmit(onSubmit)}>
           <InputBox
             icon={message}
             label="Email address"
             placeholder="e.g. alex@email.com"
             id="email"
             type="email"
-            error="Enter correct Email"
+            error={errors.email?.message}
+            register={register("email", {
+              required: {
+                value: true,
+                message: "Email is required to login",
+              },
+            })}
           />
           <InputBox
             icon={lock}
@@ -32,7 +52,13 @@ export default function LoginForm() {
             placeholder="Enter Your password"
             id="password"
             type="password"
-            error="Enter correct password"
+            error={errors.password?.message}
+            register={register("password", {
+              required: {
+                value: true,
+                message: "Password required for login",
+              },
+            })}
           />
           <Button className="bg-[#633CFF] text-white hover:bg-[#BEADFF]">
             Login
