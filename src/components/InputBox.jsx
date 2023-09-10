@@ -5,6 +5,7 @@ export default function InputBox({
   placeholder,
   icon,
   error,
+  register,
 }) {
   return (
     <div>
@@ -15,9 +16,9 @@ export default function InputBox({
         <input
           type={type}
           id={id}
-          name={id}
           className="w-full border border-gray-400 h-12 placeholder:text-gray-500 placeholder:text-sm pl-11 rounded-lg focus:outline-purple-600 focus:outline"
           placeholder={placeholder}
+          {...register}
         />
         <img
           src={icon}

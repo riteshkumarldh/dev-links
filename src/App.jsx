@@ -21,22 +21,8 @@ export default function App() {
             </RouteProtect>
           }
         />
-        <Route
-          path="/login"
-          element={
-            <RouteProtect isAuthenticated={!authenticated}>
-              <LoginPage />
-            </RouteProtect>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <RouteProtect isAuthenticated={!authenticated}>
-              <RegisterPage />
-            </RouteProtect>
-          }
-        />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route
           path="/profile"
           element={
