@@ -1,3 +1,3 @@
 export default function LinkAddForm() {
-  return <div>LinkAddForm</div>;
+  return <div className="mt-6">LinkAddForm</div>;
 }
