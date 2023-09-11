@@ -18,7 +18,7 @@ export default function LinksForm() {
           + Add new link
         </Button>
 
-        <form className="flex flex-col justify-between mb-20">
+        <form className="flex flex-col justify-between">
           {isClicked ? <LinkAddForm /> : <LinkAddInfo />}
         </form>
       </div>

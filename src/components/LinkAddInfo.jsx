@@ -2,7 +2,7 @@ import infoImage from "../assets/images/started.svg";
 
 export default function LinkAddInfo() {
   return (
-    <div className="mt-20 flex flex-col items-center">
+    <div className="py-20 rounded-3xl mt-6 flex flex-col items-center bg-[#FAFAFA]">
       <figure className="mb-10">
         <img src={infoImage} alt="infoImage" />
       </figure>
