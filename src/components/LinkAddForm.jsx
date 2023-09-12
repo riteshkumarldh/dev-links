@@ -18,10 +18,7 @@ export default function LinkAddForm() {
           </div>
           <button>Remove</button>
         </div>
-        <CustomSelectBox
-          selectOpen={selectOpen}
-          setSelectOpen={setSelectOpen}
-        />
+        <CustomSelectBox />
         <div>
           <InputBox
             icon={linkIcon}
@@ -46,10 +43,7 @@ export default function LinkAddForm() {
           </div>
           <button>Remove</button>
         </div>
-        <CustomSelectBox
-          selectOpen={selectOpen}
-          setSelectOpen={setSelectOpen}
-        />
+        <CustomSelectBox />
         <div>
           <InputBox
             icon={linkIcon}
