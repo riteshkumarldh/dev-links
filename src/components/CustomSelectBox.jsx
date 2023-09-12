@@ -1,3 +1,4 @@
+import { useState } from "react";
 import github from "../assets/icons/github.svg";
 
 const options = [
@@ -73,7 +74,8 @@ const options = [
   },
 ];
 
-export default function CustomSelectBox({ selectOpen, setSelectOpen }) {
+export default function CustomSelectBox() {
+  const [selectOpen, setSelectOpen] = useState(false);
   return (
     <div className="relative">
       <div
