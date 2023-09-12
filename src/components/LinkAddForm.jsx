@@ -1,11 +1,14 @@
 import InputBox from "./InputBox";
 import linkIcon from "../assets/icons/icon-link.svg";
+import CustomSelectBox from "./CustomSelectBox";
+import { useState } from "react";
 
 export default function LinkAddForm() {
+  const [selectOpen, setSelectOpen] = useState(false);
   return (
-    <div className="mt-10">
-      <div>
-        <div className="flex justify-between items-center mb-3">
+    <div className="mt-10 flex flex-col gap-11">
+      <div className="bg-gray-100 p-6 rounded-xl flex flex-col gap-3">
+        <div className="flex justify-between items-center">
           <div>
             <div>
               <span></span>
@@ -17,7 +20,10 @@ export default function LinkAddForm() {
           </div>
           <button>Remove</button>
         </div>
-        <div></div>
+        <CustomSelectBox
+          selectOpen={selectOpen}
+          setSelectOpen={setSelectOpen}
+        />
         <div>
           <InputBox
             icon={linkIcon}

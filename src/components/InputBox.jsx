@@ -16,7 +16,7 @@ export default function InputBox({
         <input
           type={type}
           id={id}
-          className="w-full border border-gray-400 h-12 placeholder:text-gray-500 placeholder:text-sm pl-11 rounded-lg focus:outline-purple-600 focus:outline"
+          className="w-full border border-gray-300 h-12 placeholder:text-gray-500 placeholder:text-sm pl-11 rounded-lg focus:outline-bl-300 focus:outline"
           placeholder={placeholder}
           {...register}
         />
