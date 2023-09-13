@@ -6,3 +6,7 @@
 .active * {
   @apply bg-bl-100 text-bl-300 fill-bl-300;
 }
+
+.hide__scrollbar::-webkit-scrollbar {
+  display: none;
+}

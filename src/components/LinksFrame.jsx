@@ -13,7 +13,26 @@ export default function LinksFrame() {
         ></path>
 
         <foreignObject x="0" y="0" width="100%" height="632" rx="4">
-          {/* <p>Ritesh kumar</p> */}
+          {/* <div className="h-full border border-gray-300 overflow-auto"> */}
+          <div className="flex flex-col items-center pt-16 mb-10">
+            <div className="h-24 w-24 bg-gray-200 rounded-full mb-5"></div>
+            <div className="w-40 h-4 bg-slate-200 rounded-xl mb-2"></div>
+            <div className="w-20 h-3 bg-slate-200 rounded-lg"></div>
+          </div>
+
+          <div className="px-6 flex flex-col gap-5 h-[340px] overflow-auto hide__scrollbar">
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+            <div className="w-full min-h-[44px] bg-gray-200 rounded-xl"></div>
+          </div>
+          {/* </div> */}
         </foreignObject>
       </svg>
     </div>

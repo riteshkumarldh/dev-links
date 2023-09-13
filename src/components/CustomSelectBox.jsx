@@ -123,7 +123,7 @@ export default function CustomSelectBox() {
 
       {selectOpen && (
         <ul
-          className="absolute left-0 top-[110%] max-h-52 overflow-auto border border-gray-300 shadow rounded-xl w-full bg-white z-10 "
+          className="absolute left-0 top-[110%] max-h-40 overflow-auto border border-gray-300 shadow rounded-xl w-full bg-white z-10 "
           role="listbox"
         >
           {options?.map((option) => (
