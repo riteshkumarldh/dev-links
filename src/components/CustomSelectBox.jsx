@@ -1,5 +1,19 @@
 import { useState } from "react";
+
 import github from "../assets/icons/github.svg";
+import mentor from "../assets/icons/mentor.svg";
+import twitter from "../assets/icons/twitter.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+import youtube from "../assets/icons/youtube.svg";
+import facebook from "../assets/icons/facebook.svg";
+import twitch from "../assets/icons/twitch.svg";
+import dev from "../assets/icons/dev.svg";
+import codewars from "../assets/icons/codewars.svg";
+import codepen from "../assets/icons/codepen.svg";
+import fcc from "../assets/icons/fcc.svg";
+import gitlab from "../assets/icons/gitlab.svg";
+import hashnode from "../assets/icons/hashnode.svg";
+import stackof from "../assets/icons/stackof.svg";
 
 const options = [
   {
@@ -10,67 +24,67 @@ const options = [
   {
     id: 2,
     name: "Frontend Mentor",
-    icon: github,
+    icon: mentor,
   },
   {
     id: 3,
     name: "Twitter",
-    icon: github,
+    icon: twitter,
   },
   {
     id: 4,
     name: "LinkedIn",
-    icon: github,
+    icon: linkedin,
   },
   {
     id: 5,
     name: "YouTube",
-    icon: github,
+    icon: youtube,
   },
   {
     id: 6,
     name: "Facebook",
-    icon: github,
+    icon: facebook,
   },
   {
     id: 7,
     name: "Twitch",
-    icon: github,
+    icon: twitch,
   },
   {
     id: 8,
     name: "Dev.to",
-    icon: github,
+    icon: dev,
   },
   {
     id: 9,
     name: "Codewars",
-    icon: github,
+    icon: codewars,
   },
   {
     id: 10,
     name: "Codepen",
-    icon: github,
+    icon: codepen,
   },
   {
     id: 11,
     name: "FreeCodeCamp",
-    icon: github,
+    icon: fcc,
   },
   {
     id: 12,
     name: "Gitlab",
-    icon: github,
+    icon: gitlab,
   },
   {
     id: 13,
     name: "Hashnode",
-    icon: github,
+    icon: hashnode,
   },
   {
     id: 14,
     name: "Stack Overflow",
-    icon: github,
+    icon: stackof,
   },
 ];
 
