@@ -22,7 +22,7 @@ export default function LinksForm() {
           {isClicked ? <LinkAddForm /> : <LinkAddInfo />}
         </form>
       </div>
-      <div className="py-6 border-t border-t-bl-200 mt-auto w-full flex justify-end pr-10">
+      <div className="py-6 border-t border-t-gray-300 mt-auto w-full flex justify-end pr-10">
         <Button
           type="submit"
           disabled={!isClicked}
