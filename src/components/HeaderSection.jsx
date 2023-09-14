@@ -1,13 +1,20 @@
+import { useNavigate } from "react-router-dom";
+
 import Button from "./Button";
 import Logo from "./Logo";
 import NavbarLinks from "./NavbarLinks";
 
 export default function HeaderSection() {
+  const navigate = useNavigate();
+
   return (
     <header className="flex justify-between items-center px-4 py-6 bg-white">
       <Logo className="hidden sm:block" />
       <NavbarLinks />
-      <Button className="hidden sm:block w-max border border-bl-300 text-bl-300 rounded-lg font-medium px-4 hover:bg-bl-100 ">
+      <Button
+        onClick={() => navigate("/preview")}
+        className="hidden sm:block w-max border border-bl-300 text-bl-300 rounded-lg font-medium px-4 hover:bg-bl-100 "
+      >
         Preview
       </Button>
       <Button className="sm:hidden w-max border border-bl-300 text-bl-300 rounded-lg font-medium px-4 hover:bg-bl-100 ">
