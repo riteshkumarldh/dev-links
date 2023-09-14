@@ -10,3 +10,14 @@
 .hide__scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.skelton {
+  opacity: 0.3;
+  animation: skel 1.5s linear infinite alternate;
+}
+
+@keyframes skel {
+  100% {
+    opacity: 1;
+  }
+}

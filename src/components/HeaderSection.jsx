@@ -17,7 +17,10 @@ export default function HeaderSection() {
       >
         Preview
       </Button>
-      <Button className="sm:hidden w-max border border-bl-300 text-bl-300 rounded-lg font-medium px-4 hover:bg-bl-100 ">
+      <Button
+        onClick={() => navigate("/preview")}
+        className="sm:hidden w-max border border-bl-300 text-bl-300 rounded-lg font-medium px-4 hover:bg-bl-100 "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
