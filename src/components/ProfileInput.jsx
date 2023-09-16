@@ -1,7 +1,7 @@
 export default function ProfileInput({ id, type, label, placeholder, error }) {
   return (
     <div className="sm:flex md:block lg:flex items-center">
-      <label htmlFor={id} className="text-sm w-40 mb-1 text-gray-700">
+      <label htmlFor={id} className="text-sm w-60 mb-1 text-gray-700">
         {label}
       </label>
       <div className="relative grow">

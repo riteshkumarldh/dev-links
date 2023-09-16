@@ -3,7 +3,7 @@ import ProfileInput from "./ProfileInput";
 export default function ProfileUpdateForm() {
   return (
     <div className="p-5 bg-gray-100 rounded-xl">
-      <form className="flex flex-col gap-3">
+      <form className="flex flex-col gap-4">
         <ProfileInput
           id="firstName"
           type="text"
