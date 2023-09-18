@@ -22,6 +22,7 @@ const linkReducer = (state, action) => {
               ...link,
               plateform: action.payload.plateform,
               icon: action.payload.icon,
+              link: action.payload.link,
             };
           }
 

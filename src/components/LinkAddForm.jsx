@@ -9,8 +9,8 @@ export default function LinkAddForm() {
 
   return (
     <div className="mt-10 flex flex-col gap-11">
-      {links?.map((link) => {
-        return <SinglePlateFormGroup key={link.id} link={link} />;
+      {links?.map((link, index) => {
+        return <SinglePlateFormGroup key={link.id} link={link} index={index} />;
       })}
     </div>
   );

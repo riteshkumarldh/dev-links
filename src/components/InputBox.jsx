@@ -6,6 +6,8 @@ export default function InputBox({
   icon,
   error,
   register,
+  value,
+  onChange,
 }) {
   return (
     <div>
@@ -19,6 +21,8 @@ export default function InputBox({
           className="w-full border border-gray-300 h-12 placeholder:text-gray-500 placeholder:text-sm pl-11 rounded-lg focus:outline-bl-300 focus:outline"
           placeholder={placeholder}
           {...register}
+          value={value}
+          onChange={onChange}
         />
         <img
           src={icon}

@@ -1,4 +1,7 @@
+import { useLink } from "../utils/uselink";
+
 export default function ProfileCard() {
+  const { links } = useLink();
   return (
     <>
       <div className="flex flex-col items-center px-14">
@@ -7,42 +10,42 @@ export default function ProfileCard() {
         <div className="w-20 h-3 bg-slate-200 rounded-lg skelton"></div>
       </div>
       <div className=" mt-10 flex flex-col gap-5 h-[340px] overflow-auto hide__scrollbar">
-        <div className="w-full min-h-[44px] rounded-xl px-4 flex justify-between items-center bg-black">
-          <div className="flex items-center gap-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="13"
-              height="15"
-              viewBox="0 0 13 15"
-              fill="none"
+        {links?.map((link) =>
+          link.plateform ? (
+            <div
+              className="w-full min-h-[44px] rounded-xl px-4 flex justify-between items-center bg-black"
+              key={link.id}
             >
-              <path
-                d="M8.98174 1.28805C7.67787 0.985074 6.32189 0.985074 5.01801 1.28805C4.26495 0.826185 3.69001 0.613919 3.27188 0.524319C3.09342 0.484042 2.91081 0.465065 2.72788 0.467785C2.64464 0.470041 2.56179 0.48004 2.48041 0.497652L2.46974 0.499785L2.46548 0.501919H2.46228L2.60841 1.01499L2.46228 0.502985C2.38734 0.524162 2.31795 0.561492 2.25898 0.612353C2.20001 0.663213 2.1529 0.72637 2.12094 0.797385C1.80625 1.50214 1.7463 2.29436 1.95134 3.03845C1.42029 3.68203 1.13089 4.49099 1.13321 5.32539C1.13321 6.98192 1.62174 8.09552 2.45481 8.81125C3.03828 9.31259 3.74654 9.57925 4.45694 9.73179C4.34515 10.0601 4.30301 10.4081 4.33321 10.7537V11.3915C3.89908 11.4822 3.59828 11.4534 3.38388 11.383C3.11614 11.2945 2.91028 11.1163 2.71294 10.8603C2.60979 10.7223 2.51367 10.5792 2.42494 10.4315L2.36414 10.3323C2.28737 10.2047 2.20771 10.0788 2.12521 9.95472C1.92254 9.65499 1.62174 9.27952 1.13534 9.15152L0.619078 9.01605L0.348145 10.0486L0.864411 10.1841C0.949745 10.2054 1.06068 10.2854 1.24308 10.5531C1.31328 10.6588 1.38086 10.7662 1.44574 10.8753L1.51828 10.9926C1.61854 11.1547 1.73374 11.3339 1.86708 11.5089C2.13694 11.8609 2.50494 12.2161 3.05108 12.3963C3.42441 12.5201 3.84894 12.5499 4.33321 12.4753V14.4667C4.33321 14.6082 4.3894 14.7438 4.48942 14.8438C4.58944 14.9439 4.7251 15.0001 4.86654 15.0001H9.13321C9.27466 15.0001 9.41032 14.9439 9.51034 14.8438C9.61036 14.7438 9.66654 14.6082 9.66654 14.4667V10.6662C9.66654 10.3302 9.65161 10.0219 9.55668 9.73499C10.2639 9.58565 10.9668 9.31899 11.5471 8.81765C12.3791 8.09659 12.8665 6.97232 12.8665 5.30619V5.30512C12.8639 4.47756 12.5744 3.67652 12.0473 3.03845C12.2521 2.2947 12.1922 1.50289 11.8777 0.798452C11.846 0.727352 11.7991 0.664058 11.7404 0.613014C11.6816 0.561971 11.6123 0.524415 11.5375 0.502985L11.3913 1.01499C11.5375 0.502985 11.5364 0.502985 11.5353 0.502985L11.5332 0.501919L11.5289 0.499785L11.5193 0.497652C11.493 0.490802 11.4663 0.48546 11.4393 0.481652C11.3835 0.473499 11.3272 0.468868 11.2708 0.467785C11.0879 0.465085 10.9053 0.484061 10.7268 0.524319C10.3097 0.613919 9.73481 0.826185 8.98174 1.28805Z"
-                fill="white"
-              />
-            </svg>
-            <span className="text-white">GitHub</span>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-          >
-            <path
-              d="M2.66663 7.3333V8.66664H10.6666L6.99996 12.3333L7.94663 13.28L13.2266 7.99997L7.94663 2.71997L6.99996 3.66664L10.6666 7.3333H2.66663Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
-        <div className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"></div>
+              <div className="flex items-center gap-3">
+                <img
+                  src={link.icon}
+                  alt={link.plateform}
+                  width={16}
+                  height={16}
+                  className="invert"
+                />
+                <span className="text-white">{link.plateform}</span>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M2.66663 7.3333V8.66664H10.6666L6.99996 12.3333L7.94663 13.28L13.2266 7.99997L7.94663 2.71997L6.99996 3.66664L10.6666 7.3333H2.66663Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          ) : (
+            <div
+              key={link.id}
+              className="w-full min-h-[44px] bg-gray-200 rounded-xl skelton"
+            ></div>
+          )
+        )}
       </div>
     </>
   );

@@ -94,7 +94,10 @@ export default function CustomSelectBox({ link }) {
   const [selectOpen, setSelectOpen] = useState(false);
 
   const handleAddPlateform = (linkId, plateform, icon) => {
-    dispatch({ type: "editLink", payload: { linkId, plateform, icon } });
+    dispatch({
+      type: "editLink",
+      payload: { linkId, plateform, icon, link: link.link },
+    });
 
     setSelectOpen(false);
   };
