@@ -12,7 +12,10 @@ export default function ProfileCard() {
       <div className=" mt-10 flex flex-col gap-5 h-[340px] overflow-auto hide__scrollbar">
         {links?.map((link) =>
           link.plateform ? (
-            <div
+            <a
+              href={link.link}
+              target="_blank"
+              rel="noreferrer"
               className="w-full min-h-[44px] rounded-xl px-4 flex justify-between items-center bg-black"
               key={link.id}
             >
@@ -38,7 +41,7 @@ export default function ProfileCard() {
                   fill="white"
                 />
               </svg>
-            </div>
+            </a>
           ) : (
             <div
               key={link.id}
