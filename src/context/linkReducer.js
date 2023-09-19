@@ -9,7 +9,14 @@ const linkReducer = (state, action) => {
         ...state,
         links: [
           ...state.links,
-          { plateform: "", id: crypto.randomUUID(), link: "", icon: "" },
+          {
+            id: crypto.randomUUID(),
+            plateform: "",
+            link: "",
+            icon: "",
+            color: "",
+            textColor: "",
+          },
         ],
       };
 
@@ -23,6 +30,8 @@ const linkReducer = (state, action) => {
               plateform: action.payload.plateform,
               icon: action.payload.icon,
               link: action.payload.link,
+              color: action.payload.color,
+              textColor: action.payload.textColor,
             };
           }
 

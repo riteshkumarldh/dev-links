@@ -21,71 +21,99 @@ const options = [
     id: 1,
     name: "GitHub",
     icon: github,
+    bgColor: "#1A1A1A",
+    textColor: "#fff",
   },
   {
     id: 2,
     name: "Frontend Mentor",
     icon: mentor,
+    bgColor: "#fff",
+    textColor: "#000",
   },
   {
     id: 3,
     name: "Twitter",
     icon: twitter,
+    bgColor: "#43B7E9",
+    textColor: "#fff",
   },
   {
     id: 4,
     name: "LinkedIn",
     icon: linkedin,
+    bgColor: "#2D68FF",
+    textColor: "#fff",
   },
   {
     id: 5,
     name: "YouTube",
     icon: youtube,
+    bgColor: "#EE3939",
+    textColor: "#fff",
   },
   {
     id: 6,
     name: "Facebook",
     icon: facebook,
+    bgColor: "#2442AC",
+    textColor: "#fff",
   },
   {
     id: 7,
     name: "Twitch",
     icon: twitch,
+    bgColor: "#EE3FC8",
+    textColor: "#fff",
   },
   {
     id: 8,
     name: "Dev.to",
     icon: dev,
+    bgColor: "#333",
+    textColor: "#fff",
   },
   {
     id: 9,
     name: "Codewars",
     icon: codewars,
+    bgColor: "#8A1A50",
+    textColor: "#fff",
   },
   {
     id: 10,
     name: "Codepen",
     icon: codepen,
+    bgColor: "#333",
+    textColor: "#fff",
   },
   {
     id: 11,
     name: "FreeCodeCamp",
     icon: fcc,
+    bgColor: "#302267",
+    textColor: "#fff",
   },
   {
     id: 12,
     name: "Gitlab",
     icon: gitlab,
+    bgColor: "#EB4925",
+    textColor: "#fff",
   },
   {
     id: 13,
     name: "Hashnode",
     icon: hashnode,
+    bgColor: "#0330D1",
+    textColor: "#fff",
   },
   {
     id: 14,
     name: "Stack Overflow",
     icon: stackof,
+    bgColor: "#EC7100",
+    textColor: "#fff",
   },
 ];
 
@@ -93,10 +121,10 @@ export default function CustomSelectBox({ link }) {
   const { dispatch } = useLink();
   const [selectOpen, setSelectOpen] = useState(false);
 
-  const handleAddPlateform = (linkId, plateform, icon) => {
+  const handleAddPlateform = (linkId, plateform, icon, color, textColor) => {
     dispatch({
       type: "editLink",
-      payload: { linkId, plateform, icon, link: link.link },
+      payload: { linkId, plateform, icon, link: link.link, color, textColor },
     });
 
     setSelectOpen(false);
@@ -148,7 +176,13 @@ export default function CustomSelectBox({ link }) {
               role="option"
               tabIndex={0}
               onClick={() =>
-                handleAddPlateform(link.id, option.name, option.icon)
+                handleAddPlateform(
+                  link.id,
+                  option.name,
+                  option.icon,
+                  option.bgColor,
+                  option.textColor
+                )
               }
             >
               <span>

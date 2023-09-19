@@ -25,6 +25,8 @@ export default function SinglePlateFormGroup({ link, index }) {
         link: e.target.value,
         plateform: link.plateform,
         icon: link.icon,
+        color: link.color,
+        textColor: link.textColor,
       },
     });
   };
