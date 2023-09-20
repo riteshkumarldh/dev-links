@@ -39,6 +39,12 @@ const linkReducer = (state, action) => {
         }),
       };
 
+    case "removeLink":
+      return {
+        ...state,
+        links: state.links.filter((link) => link.id !== action.payload.id),
+      };
+
     default:
       return state;
   }

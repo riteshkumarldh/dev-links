@@ -31,6 +31,15 @@ export default function SinglePlateFormGroup({ link, index }) {
     });
   };
 
+  const handleRemoveLink = (id) => {
+    dispatch({
+      type: "removeLink",
+      payload: {
+        id,
+      },
+    });
+  };
+
   return (
     <div className="bg-gray-100 p-6 rounded-xl flex flex-col gap-3">
       <div className="flex justify-between items-center">
@@ -43,7 +52,12 @@ export default function SinglePlateFormGroup({ link, index }) {
             Link #<span>{index + 1}</span>
           </h2>
         </div>
-        <button className="text-gray-600 hover:text-gray-800">Remove</button>
+        <button
+          className="text-gray-600 hover:text-gray-800"
+          onClick={() => handleRemoveLink(link.id)}
+        >
+          Remove
+        </button>
       </div>
       <CustomSelectBox link={link} />
       <div>
