@@ -1,6 +1,6 @@
 import ProfileCard from "./ProfileCard";
 
-export default function LinksFrame() {
+export default function LinksFrame({ details }) {
   return (
     <div className=" bg-white hidden md:block w-max p-10 xl:px-28 rounded-3xl">
       <svg width="308" height="632" fill="none" viewBox="0 0 308 632">
@@ -16,7 +16,7 @@ export default function LinksFrame() {
 
         <foreignObject x="0" y="0" width="100%" height="632" rx="4">
           <div className="pt-16 px-8">
-            <ProfileCard />
+            <ProfileCard details={details} />
           </div>
         </foreignObject>
       </svg>

@@ -1,31 +1,49 @@
 import ProfileInput from "./ProfileInput";
 
-export default function ProfileUpdateForm() {
+export default function ProfileUpdateForm({ register, errors }) {
   return (
     <div className="p-5 bg-gray-100 rounded-xl">
-      <form className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <ProfileInput
           id="firstName"
           type="text"
           label="First Name*"
           placeholder="e.g. John"
-          error="Can't be empty"
+          error={errors?.firstName?.message}
+          register={register("firstName", {
+            required: {
+              value: true,
+              message: "Can't be empty",
+            },
+          })}
         />
         <ProfileInput
           id="lastName"
           type="text"
           label="Last Name*"
           placeholder="e.g. Appleseed"
-          error="Can't be empty"
+          error={errors?.lastName?.message}
+          register={register("lastName", {
+            required: {
+              value: true,
+              message: "Can't be empty",
+            },
+          })}
         />
         <ProfileInput
           id="email"
           type="email"
           label="Email"
           placeholder="e.g. email@example.com"
-          error="Email required"
+          error={errors?.email?.message}
+          register={register("email", {
+            required: {
+              value: true,
+              message: "Email is required",
+            },
+          })}
         />
-      </form>
+      </div>
     </div>
   );
 }

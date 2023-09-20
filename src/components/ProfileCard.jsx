@@ -1,14 +1,34 @@
 import { useLink } from "../utils/uselink";
 
-export default function ProfileCard() {
+export default function ProfileCard({ details }) {
   const { links } = useLink();
 
   return (
     <>
       <div className="flex flex-col items-center px-14">
         <div className="h-24 w-24 bg-gray-200 rounded-full mb-5 skelton"></div>
-        <div className="w-40 h-4 bg-slate-200 rounded-xl mb-2 skelton"></div>
-        <div className="w-20 h-3 bg-slate-200 rounded-lg skelton"></div>
+        {details?.firstName || details?.lastName ? (
+          <div className="h-4 flex-nowrap rounded-xl mb-2 flex gap-1 items-center px-4">
+            <span className="whitespace-nowrap font-semibold text-md">
+              {details?.firstName}
+            </span>
+            <span className="whitespace-nowrap font-semibold text-md">
+              {details?.lastName}
+            </span>
+          </div>
+        ) : (
+          <div className="w-40 h-4 bg-slate-200 rounded-xl mb-2 skelton"></div>
+        )}
+
+        {details?.email ? (
+          <div className="h-4 flex-nowrap rounded-xl mb-2 flex gap-1 items-center px-4">
+            <span className="whitespace-nowrap font-semibold text-xs text-gray-500">
+              {details?.email}
+            </span>
+          </div>
+        ) : (
+          <div className="w-20 h-3 bg-slate-200 rounded-lg skelton"></div>
+        )}
       </div>
       <div className=" mt-10 flex flex-col gap-5 h-[340px] overflow-auto hide__scrollbar">
         {links?.map((link) =>

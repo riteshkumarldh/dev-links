@@ -33,7 +33,7 @@ export default function LinksForm() {
           {links.length > 0 ? <LinkAddForm /> : <LinkAddInfo />}
         </form>
       </div>
-      <RightBottomBtn />
+      <RightBottomBtn disabled={links.length < 1} />
     </div>
   );
 }
