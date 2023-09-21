@@ -1,12 +1,14 @@
+import { useEffect } from "react";
+import { useLink } from "../utils/uselink";
 import { useForm } from "react-hook-form";
 
 import LinksFormTop from "./LinksFormTop";
 import ProfilePictureUpload from "./ProfilePictureUpload";
 import ProfileUpdateForm from "./ProfileUpdateForm";
 import RightBottomBtn from "./RightBottomBtn";
-import { useEffect } from "react";
 
 export default function ProfileDetails({ setDetails }) {
+  const { dispatch, profile } = useLink();
   const {
     register,
     watch,
@@ -14,8 +16,8 @@ export default function ProfileDetails({ setDetails }) {
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (val) => {
-    console.log(val);
+  const onSubmit = (formData) => {
+    dispatch({ type: "saveProfile", payload: formData });
   };
 
   useEffect(() => {
@@ -24,6 +26,9 @@ export default function ProfileDetails({ setDetails }) {
     });
     return () => subscription.unsubscribe();
   }, [watch, setDetails]);
+
+  console.log(profile);
+
   return (
     <form
       className="bg-white rounded-3xl flex flex-col justify-between w-full"

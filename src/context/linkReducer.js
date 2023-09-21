@@ -1,5 +1,6 @@
 export const initialState = {
   links: [],
+  profile: {},
 };
 
 const linkReducer = (state, action) => {
@@ -43,6 +44,12 @@ const linkReducer = (state, action) => {
       return {
         ...state,
         links: state.links.filter((link) => link.id !== action.payload.id),
+      };
+
+    case "saveProfile":
+      return {
+        ...state,
+        profile: action.payload,
       };
 
     default:
